@@ -1,0 +1,32 @@
+1. Project Setup
+laravel new groupia-users
+mysql -uroot -p -e "CREATE DATABASE groupia_users"
+.env
+
+2. User Authentication
+composer require laravel/breeze --dev
+php artisan breeze:install
+
+3. MVCR
+php artisan make:model Person -m
+database\migrations\create_people_table
+php artisan migrate
+php artisan make:controller PersonController
+app\Models\Person
+app\Http\Controllers\PersonController
+resources\views\layouts\navigation.blade
+resources\views\dashboard.blade
+resources\views\history.blade
+resources\views\reset.blade
+routes\web
+
+4. Pagination
+php artisan vendor:publish
+choose <laravel-pagination>
+app\Providers\AppServiceProvider
+resources\views\vendor\pagination\bootstrap-4.blade
+<nav class="mt-4">
+<ul class="pagination justify-content-center">
+public\css+js(bootstrap)
+resources\views\layouts\app.blade
+resources\views\layouts\guest.blade
